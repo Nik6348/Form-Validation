@@ -16,53 +16,53 @@ function customTheme() {
 let initialAlertShown = false;
 
 function navigateTo(sectionId) {
-  if (validateSection()) {
+   if (validateSection()) {
 
-    if (sectionId === 'confirmation-section') {
-      let Confirm = document.querySelector('.Confirm');
-      Confirm.style.display = 'block';
+  if (sectionId === 'confirmation-section') {
+    let Confirm = document.querySelector('.Confirm');
+    Confirm.style.display = 'block';
 
-      let allSections = document.querySelectorAll('.hidden');
-      let navigation = document.querySelectorAll('.navigation')
+    let allSections = document.querySelectorAll('.hidden');
+    let navigation = document.querySelectorAll('.navigation')
 
-      // show all section
-      allSections.forEach(section => {
-        section.classList.remove('hidden');
-        section.classList.add('visible');
+    // show all section
+    allSections.forEach(section => {
+      section.classList.remove('hidden');
+      section.classList.add('visible');
 
-      });
+    });
 
-      // hide navigation button
-      navigation.forEach(button => {
-        if (button.id !== 'nav-btn') {
-          button.style.display = 'none';
-        }
-      });
-    }
-
-    else if (sectionId === 'submission-section') {
-      let Confirm = document.querySelector('.Confirm');
-      Confirm.style.display = 'none';
-
-      let submit = document.querySelector('#submission-section');
-      submit.style.display = 'block';
-      let currentSection = document.querySelectorAll('.visible');
-      currentSection.forEach(section => {
-        section.classList.remove('visible');
-        section.classList.add('hidden');
-      })
-    }
-
-
-    let currentSection = document.querySelector('.visible');
-    currentSection.classList.remove('visible');
-    currentSection.classList.add('hidden');
-
-    let nextSection = document.getElementById(sectionId);
-    nextSection.classList.remove('hidden');
-    nextSection.classList.add('visible');
-
+    // hide navigation button
+    navigation.forEach(button => {
+      if (button.id !== 'nav-btn') {
+        button.style.display = 'none';
+      }
+    });
   }
+
+  else if (sectionId === 'submission-section') {
+    let Confirm = document.querySelector('.Confirm');
+    Confirm.style.display = 'none';
+
+    let submit = document.querySelector('#submission-section');
+    submit.style.display = 'block';
+    let currentSection = document.querySelectorAll('.visible');
+    currentSection.forEach(section => {
+      section.classList.remove('visible');
+      section.classList.add('hidden');
+    })
+  }
+
+
+  let currentSection = document.querySelector('.visible');
+  currentSection.classList.remove('visible');
+  currentSection.classList.add('hidden');
+
+  let nextSection = document.getElementById(sectionId);
+  nextSection.classList.remove('hidden');
+  nextSection.classList.add('visible');
+
+}
 }
 
 
@@ -157,6 +157,28 @@ function checkInput(inputId) {
   }
 }
 
+function validateRadioButton(inputId, errorElement) {
+  let radioButtons = document.getElementsByName(inputId);
+  let isChecked = false;
+
+  for (let i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+      isChecked = true;
+      break;
+    }
+  }
+
+  if (!isChecked) {
+    errorElement.innerHTML = '<i class="fa-solid fa-triangle-exclamation fa-fade" style="color: #fd3908;"></i>';
+    errorElement.innerText = 'Please select an option';
+    return false;
+  }
+
+  errorElement.innerHTML = '<i class="fa-solid fa-circle-check" style="color: #49f50a;"></i>';
+  errorElement.innerText = '';
+  return true;
+}
+
 // Validate age
 function validateAge() {
   let ageInput = document.getElementById('age');
@@ -196,7 +218,7 @@ function validatePhoneNumber(phone, iconElement, errorElement) {
 }
 
 function validateEmail(email, iconElement, errorElement) {
-  if (!(/^[^\s]+@[^\s]+\.[^\s]+$/.test(email.value))) {
+  if (!(/^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email.value))) {
     iconElement.innerHTML = '<i class="fa-solid fa-triangle-exclamation fa-fade" style="color: #fd3908;"></i>';
     errorElement.innerText = 'Invalid Email-ID';
   } else {
@@ -220,7 +242,6 @@ function validatePincode(pincode, iconElement, errorElement) {
     iconElement.innerHTML = '<i class="fa-solid fa-triangle-exclamation fa-fade" style="color: #fd3908;"></i>';
     errorElement.innerText = 'Enter a valid pincode';
   } else {
-    populateDistrictState()
     iconElement.innerHTML = '<i class="fa-solid fa-circle-check" style="color: #49f50a;"></i>';
     errorElement.innerText = '';
   }
