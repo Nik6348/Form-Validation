@@ -10,8 +10,6 @@
 
 ![🌟 Explore the Demo:](Demo.png?raw=true "Form Validation")
 
-![🌟 Explore the Demo:](Demo2.png?raw=true "Form Validation")
-
 
 🎨 Highlights:
 - Lightweight and easy to integrate into any web project.
