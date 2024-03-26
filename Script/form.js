@@ -220,7 +220,6 @@ function validatePincode(pincode, iconElement, errorElement) {
     iconElement.innerHTML = '<i class="fa-solid fa-triangle-exclamation fa-fade" style="color: #fd3908;"></i>';
     errorElement.innerText = 'Enter a valid pincode';
   } else {
-    populateDistrictState()
     iconElement.innerHTML = '<i class="fa-solid fa-circle-check" style="color: #49f50a;"></i>';
     errorElement.innerText = '';
   }
