@@ -1,6 +1,6 @@
 // custom theme
 let bgColor = document.getElementById('bg-color');
-bgColor.value = '#BBE8BE';
+bgColor.value = '#fff';
 
 function customTheme() {
   let fontColor = document.getElementById('font-color');
