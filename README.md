@@ -5,6 +5,12 @@
 - Stylish and responsive design for a polished user experience.
 - Real-time feedback to guide users through the form.
 
+🌟 Explore the Demo:
+[FormValidationJS Demo](https://nik6348.github.io/Form-Validation)
+
+![🌟 Explore the Demo:](Demo.png?raw=true "Form Validation)
+
+
 🎨 Highlights:
 - Lightweight and easy to integrate into any web project.
 - Suitable for beginners and advanced developers alike.
@@ -18,5 +24,3 @@
 🤝 Contributions:
 Contributions are appreciated! Fork the project, improve existing validations, or add support for new input types. Let's create the ultimate form validation library together!
 
-🌟 Explore the Demo:
-[FormValidationJS Demo](#)
