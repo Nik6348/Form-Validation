@@ -16,53 +16,53 @@ function customTheme() {
 let initialAlertShown = false;
 
 function navigateTo(sectionId) {
-   if (validateSection()) {
+  if (validateSection()) {
 
-  if (sectionId === 'confirmation-section') {
-    let Confirm = document.querySelector('.Confirm');
-    Confirm.style.display = 'block';
+    if (sectionId === 'confirmation-section') {
+      let Confirm = document.querySelector('.Confirm');
+      Confirm.style.display = 'block';
 
-    let allSections = document.querySelectorAll('.hidden');
-    let navigation = document.querySelectorAll('.navigation')
+      let allSections = document.querySelectorAll('.hidden');
+      let navigation = document.querySelectorAll('.navigation')
 
-    // show all section
-    allSections.forEach(section => {
-      section.classList.remove('hidden');
-      section.classList.add('visible');
+      // show all section
+      allSections.forEach(section => {
+        section.classList.remove('hidden');
+        section.classList.add('visible');
 
-    });
+      });
 
-    // hide navigation button
-    navigation.forEach(button => {
-      if (button.id !== 'nav-btn') {
-        button.style.display = 'none';
-      }
-    });
+      // hide navigation button
+      navigation.forEach(button => {
+        if (button.id !== 'nav-btn') {
+          button.style.display = 'none';
+        }
+      });
+    }
+
+    else if (sectionId === 'submission-section') {
+      let Confirm = document.querySelector('.Confirm');
+      Confirm.style.display = 'none';
+
+      let submit = document.querySelector('#submission-section');
+      submit.style.display = 'block';
+      let currentSection = document.querySelectorAll('.visible');
+      currentSection.forEach(section => {
+        section.classList.remove('visible');
+        section.classList.add('hidden');
+      })
+    }
+
+
+    let currentSection = document.querySelector('.visible');
+    currentSection.classList.remove('visible');
+    currentSection.classList.add('hidden');
+
+    let nextSection = document.getElementById(sectionId);
+    nextSection.classList.remove('hidden');
+    nextSection.classList.add('visible');
+
   }
-
-  else if (sectionId === 'submission-section') {
-    let Confirm = document.querySelector('.Confirm');
-    Confirm.style.display = 'none';
-
-    let submit = document.querySelector('#submission-section');
-    submit.style.display = 'block';
-    let currentSection = document.querySelectorAll('.visible');
-    currentSection.forEach(section => {
-      section.classList.remove('visible');
-      section.classList.add('hidden');
-    })
-  }
-
-
-  let currentSection = document.querySelector('.visible');
-  currentSection.classList.remove('visible');
-  currentSection.classList.add('hidden');
-
-  let nextSection = document.getElementById(sectionId);
-  nextSection.classList.remove('hidden');
-  nextSection.classList.add('visible');
-
-}
 }
 
 
@@ -119,7 +119,7 @@ function checkInput(inputId) {
     validatePhoneNumber(element, iconElement, errorElement);
   } else if (element.type === 'email') {
     validateEmail(element, iconElement, errorElement);
-  } else if (element.type === 'text' && inputId !== 'bankacc'&& inputId !== 'bankifsc' && inputId !== 'voter' && inputId !== 'driving' && inputId !== 'pancard') {
+  } else if (element.type === 'text' && inputId !== 'bankacc' && inputId !== 'bankifsc' && inputId !== 'voter' && inputId !== 'driving' && inputId !== 'pancard') {
     validateName(element, inputId, iconElement, errorElement);
   }
   else if (inputId === 'pincode') {
@@ -147,7 +147,7 @@ function checkInput(inputId) {
     isValidVoterId(element, iconElement, errorElement);
   } else if (inputId === 'driving') {
     isValidDrivingLicense(element, iconElement, errorElement);
-  }  
+  }
   else if (inputId === 'bankacc') {
     isValidBankAccountNumber(element, iconElement, errorElement);
   }
@@ -172,7 +172,7 @@ function validateAge() {
     age--;
 
     ageInput.value = age;
-    
+
 
     if (age > 80 || age < 0) {
       ageIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation fa-fade" style="color: #fd3908;"></i>';
@@ -258,7 +258,6 @@ function isValidBankAccountNumber(accountNumber, iconElement, errorElement) {
 
   }
 }
-
 
 //Adrees-checkbox
 function AddressCheck(element) {
