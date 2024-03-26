@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Insurance Policies Online | Secure Your Future with LIC India | Official website of Life Insurance
+    Corporation of India.</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/plans.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="shortcut icon" href="https://licindia.in/o/liferaytheme-theme/images/logo.png">
+</head>
+
+<body>
+
+  <div class="container brand-lic">
+    <div class="lic-logo"><img src="images/logo.png" alt="Official Website of Life Insurance Corporation of India"
+        title="Official Website of Life Insurance Corporation of India">
+    </div>
+
+    <div class="theme-container">
+      <label for="bg">BG</label>
+      <input type="color" id="bg-color" oninput="customTheme()">
+      <label for="font">Font</label>
+      <input type="color" id="font-color" oninput="customTheme()">
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div id="progress-bar"></div>
+    <h2 class="text-center Confirm" style="display: none;">Please Confirm Your Details Before Submission Form</h2>
+
+    <div class="visible" id="sec1">
+
+      <form class="row-g-3 form-section bs-primary-border-subtle">
+        <h2>Personal Information</h2>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="first-name" class="form-label"><i class="fa-solid fa-user"></i>First Name</label>
+            <div class="input-container">
+              <input type="text" class="form-control" id="first-name" oninput="checkInput('first-name')" maxlength="20">
+              <span id="first-name-icon" class="input-icon"></span>
+              <span class="input-error" id="first-name-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="last-name" class="form-label"><i class="fa-solid fa-user"></i>Last Name</label>
+            <div class="input-container">
+              <input type="text" class="form-control" id="last-name" oninput="checkInput('last-name')" maxlength="20">
+              <span id="last-name-icon" class="input-icon"></span>
+              <span class="input-error" id="last-name-error"></span>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="dob" class="form-label"><i class="fa-solid fa-cake-candles"></i>Date Of Birth</label>
+            <div class="input-container">
+              <input type="date" class="form-control" id="dob" oninput="checkInput('dob')">
+              <span id="dob-icon" class="input-icon"></span>
+              <span class="input-error" id="dob-error"></span>
+
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label for="age" class="form-label">Age</label>
+            <div class="input-container">
+              <input type="text" readonly class="form-control" id="age" disabled>
+              <span id="age-icon" class="input-icon"></span>
+              <span class="input-error" id="age-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="religion" class="form-label">Religion</label>
+            <div class="input-container">
+              <input type="text" class="form-control" id="religion" oninput="checkInput('religion')" maxlength="20">
+              <span id="religion-icon" class="input-icon"></span>
+              <span class="input-error" id="religion-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="nationality" class="form-label">Nationality</label>
+            <div class="input-container">
+              <select id="nationality" class="form-select" onchange="checkInput('nationality')">
+                <option value="" selected>
+                  Choose... </option>
+                <option value="in">India</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+              </select>
+              <span id="nationality-icon" class="input-icon"></span>
+              <span class="input-error" id="nationality-error"></span>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="gender" class="form-label" id="gender">Gender</label><br>
+            <input type="radio" id="male" value="male" class="form-radio" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" value="female" class="form-radio" name="gender">
+            <label for="female">Female</label>
+            <input type="radio" id="other" value="other" class="form-radio" name="gender">
+            <label for="other">Other</label>
+            <span class="input-error" id="gender-error"></span>
+          </div>
+
+          <div class="col-sm-6 caste">
+            <label for="caste" class="form-label" id="caste">Caste</label><br>
+            <input type="radio" id="genral" value="genral" class="form-radio" name="cast">
+            <label for="genral">Genral</label>
+            <input type="radio" id="obc" value="obc" class="form-radio" name="cast">
+            <label for="obc">OBC</label>
+            <input type="radio" id="sc" value="sc" class="form-radio" name="cast">
+            <label for="sc">SC</label>
+            <input type="radio" id="st" value="st" class="form-radio" name="cast">
+            <label for="st">St</label>
+            <span class="input-error" id="caste-error"></span>
+          </div>
+
+        </div>
+      </form>
+      <div class="navigation">
+        <button class="btn btn-warning "><a href="index.html"
+            style="text-decoration: none;color: black;">Home</a></button>
+        <button type="button" class="btn btn-primary next-btn" onclick="navigateTo('sec2')">Next</button>
+      </div>
+    </div>
+
+
+    <!-- Contact Details:- -->
+    <div class="hidden" id='sec2'>
+      <form class="row-g-2 form-section">
+        <h2>Contact Details</h2>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="phone" class="form-label">Mobile No.</label>
+            <div class="input-container">
+              <input type="tel" class="form-control" id="phone" oninput="checkInput('phone')" maxlength="10">
+              <span id="phone-icon" class="input-icon"></span>
+              <span class="input-error" id="phone-error"></span>
+            </div>
+          </div>
+
+
+          <div class="col-sm-6">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-container">
+              <input type="email" class="form-control" id="email" oninput="checkInput('email')" maxlength="50">
+              <span id="email-icon" class="input-icon"></span>
+              <span class="input-error" id="email-error"></span>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="inputAddress" class="form-label">Residential-Address</label>
+            <div class="input-container">
+              <input type="text" class="form-control" id="inputAddress" oninput="checkInput('inputAddress')"
+                maxlength="50">
+              <span id="inputAddress-icon" class="input-icon"></span>
+              <span class="input-error" id="inputAddress-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6 form-check ">
+            <label for="addrss-check" class="form-check-label">Same as Residential-Address </label>
+            <div class="input-container">
+              <input type="checkbox" class="form-check-input" id="addrss-check" name="addrss-check"
+                onchange="AddressCheck(this)">
+              <span id="addrss-check-icon" class="input-icon"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 inputAddress2">
+          <label for="inputAddress2" class="form-label">Mailing-Address</label>
+          <div class="input-container">
+            <input type="text" class="form-control" id="inputAddress2" oninput="checkInput('inputAddress2')"
+              maxlength="50">
+            <span id="inputAddress2-icon" class="input-icon"></span>
+            <span class="input-error" id="inputAddress2-error"></span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="input-container">
+              <label for="states" class="form-label">State</label>
+              <select id="states" name="states" class="form-select" oninput="checkInput('states')">
+                <option value="" selected>Select State</option>
+              </select>
+              <span id="states-icon" class="input-icon"></span>
+              <span class="input-error" id="states-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label for="districts" class="form-label">District</label>
+            <div class="input-container">
+              <select id="districts" class="form-select" name="districts" onchange="checkInput('districts')">
+                <option value="" selected>Select District</option>
+              </select>
+              <span id="districts-icon" class="input-icon"></span>
+              <span class="input-error" id="districts-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label for="pincode" class="form-label">Pin Code</label>
+            <div class="input-container">
+              <input type="number" class="form-control" id="pincode" oninput="checkInput('pincode')" maxlength="6">
+              <span id="pincode-icon" class="input-icon"></span>
+              <span class="input-error" id="pincode-error"></span>
+            </div>
+          </div>
+        </div>
+
+      </form>
+      <div class="navigation">
+        <button type="button" class="btn btn-warning " onclick="navigateTo('sec1')">back</button>
+        <button type="button" class="btn btn-primary" onclick="navigateTo('sec3')">Next</button>
+      </div>
+
+    </div>
+
+    <!-- Beneficiary Information: -->
+    <div class="hidden" id="sec3">
+      <form class="row-g-3 form-section">
+        <h2>Beneficiary Information</h2>
+
+        <div id="beneficiaryList">
+          <!-- Beneficiary added dynamically -->
+        </div>
+
+
+        <div class="navigation" id="nav-btn">
+          <button type="button" class="btn btn-success" onclick="addBeneficiary()">Add Beneficiary</button>
+          <button type="button" class="btn btn-danger" onclick="removeBeneficiary()">Remove Beneficiary</button>
+        </div>
+
+      </form>
+      <div class="navigation">
+        <button type="button" class="btn btn-warning " onclick="navigateTo('sec2')">back</button>
+        <button type="button" class="btn btn-primary" onclick="handleNextButtonClick()">Next</button>
+      </div>
+    </div>
+
+    <!-- Banking Details -->
+    <div class="hidden" id="sec4">
+      <form class="row-g-3 form-section">
+        <h2>Banking Details</h2>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="aadhar" class="form-label">Aadhar No</label>
+            <div class="input-container">
+              <input type="number" id="aadhar" class="form-control" name="aadhar" oninput="checkInput('aadhar')"
+                placeholder="e.g. 123456789012" maxlength="12">
+              <span id="aadhar-icon" class="input-icon"></span>
+              <span class="input-error" id="aadhar-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="pancard" class="form-label">Pancard No</label>
+            <div class="input-container">
+              <input type="text" id="pancard" class="form-control" name="pancard" oninput="checkInput('pancard')"
+                maxlength="10" placeholder="e.g. ABCDE1234N">
+              <span id="pancard-icon" class="input-icon"></span>
+              <span class="input-error" id="pancard-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="bankacc" class="form-label">Bank Account No</label>
+            <div class="input-container">
+              <input type="number" id="bankacc" name="bankacc" class="form-control" oninput="checkInput('bankacc')"
+                placeholder="e.g. 1234567890" maxlength="20">
+              <span id="bankacc-icon" class="input-icon"></span>
+              <span class="input-error" id="bankacc-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="bankifsc" class="form-label">Ifsc Code</label>
+            <div class="input-container">
+              <input type="text" id="bankifsc" name="bankifsc" class="form-control" oninput="checkInput('bankifsc')"
+                placeholder="e.g. SBIN0123456" maxlength="20">
+              <span id="bankifsc-icon" class="input-icon"></span>
+              <span class="input-error" id="bankifsc-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="voter" class="form-label">Voter Id</label>
+            <div class="input-container">
+              <input type="text" id="voter" name="voter" class="form-control" oninput="checkInput('voter')"
+                placeholder="e.g. ABC1234567" maxlength="20">
+              <span id="voter-icon" class="input-icon"></span>
+              <span class="input-error" id="voter-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="driving" class="form-label">Driving License</label>
+            <div class="input-container">
+              <input type="text" id="driving" name="driving" class="form-control" oninput="checkInput('driving')"
+                maxlength="20" placeholder="e.g. DL-1234567890123">
+              <span id="driving-icon" class="input-icon"></span>
+              <span class="input-error" id="driving-error"></span>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+      <div class="navigation">
+        <button type="button" class="btn btn-warning" onclick="navigateTo('sec3')">back</button>
+        <button type="button" class="btn btn-primary" onclick="navigateTo('sec5')">Next</button>
+      </div>
+    </div>
+
+    <!-- Occupation and Income:- -->
+    <div class="hidden" id="sec5">
+      <form class="row-g-3 form-section">
+        <h2>Financial Information</h2>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="employmentStatus" class="form-label">Employment Status</label>
+            <div class="input-container">
+              <select id="employmentStatus" class="form-select" onchange="checkInput('employmentStatus')">
+                <option value="" selected>Choose...</option>
+                <option value="fullTime">Employed (Full-Time)</option>
+                <option value="partTime">Employed (Part-Time)</option>
+                <option value="selfEmployed">Self-Employed</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="student">Student</option>
+                <option value="retired">Retired</option>
+                <option value="homemaker">Homemaker</option>
+                <option value="freelancer">Freelancer</option>
+                <option value="contractor">Contractor</option>
+                <option value="temporary">Temporary/Seasonal Worker</option>
+              </select>
+              <span id="employmentStatus-icon" class="input-icon"></span>
+              <span class="input-error" id="employmentStatus-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="occupation" class="form-label">Occupation</label>
+            <div class="input-container">
+              <select id="occupation" name="occupation" class="form-select" onchange="checkInput('occupation')">
+                <option value="" selected>Choose...</option>
+                <option value="businessOwner">Business Owner</option>
+                <option value="softwareEngineer">Software Engineer</option>
+                <option value="student">Student</option>
+                <option value="farmer">Farmer</option>
+                <option value="doctor">Doctor</option>
+                <option value="teacher">Teacher</option>
+                <option value="artist">Artist</option>
+                <option value="other">Other</option>
+              </select>
+              <span id="occupation-icon" class="input-icon"></span>
+              <span class="input-error" id="occupation-error"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="sourceOfIncome" class="form-label">Source of Income</label>
+            <div class="input-container">
+              <select id="sourceOfIncome" class="form-select" onchange="checkInput('sourceOfIncome')">
+                <option value="" selected>Choose...</option>
+                <option value="employment">Employment</option>
+                <option value="business">Business</option>
+                <option value="investments">Investments</option>
+                <option value="rental">Rental Income</option>
+                <option value="freelance">Freelance</option>
+                <option value="retirement">Retirement</option>
+                <option value="other">Other</option>
+              </select>
+              <span id="sourceOfIncome-icon" class="input-icon"></span>
+              <span class="input-error" id="sourceOfIncome-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="netWorth" class="form-label">Net Worth</label>
+            <div class="input-container">
+              <select id="netWorth" class="form-select" onchange="checkInput('netWorth')">
+                <option value="" selected>Choose...</option>
+                <option value="below50k">$0 - $50,000</option>
+                <option value="50k-100k">$50,001 - $100,000</option>
+                <option value="100k-500k">$100,001 - $500,000</option>
+                <option value="500k-1m">$500,001 - $1,000,000</option>
+                <option value="1m-5m">$1,000,001 - $5,000,000</option>
+                <option value="above5m">Above $5,000,000</option>
+              </select>
+              <span id="netWorth-icon" class="input-icon"></span>
+              <span class="input-error" id="netWorth-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="annualIncome" class="form-label">Annual Income</label>
+            <div class="input-container">
+              <input type="number" class="form-control" id="annualIncome" oninput="checkInput('annualIncome')"
+                maxlength="7">
+              <span id="annualIncome-icon" class="input-icon"></span>
+              <span class="input-error" id="annualIncome-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="companyName" class="form-label">Company Name</label>
+            <div class="input-container">
+              <input type="text" class="form-control" id="companyName" oninput="checkInput('companyName')"
+                maxlength="20">
+              <span id="companyName-icon" class="input-icon"></span>
+              <span class="input-error" id="companyName-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="jobTitle" class="form-label">Job Title</label>
+            <div class="input-container">
+              <input type="text" class="form-control" id="jobTitle" oninput="checkInput('jobTitle')" maxlength="20">
+              <span id="jobTitle-icon" class="input-icon"></span>
+              <span class="input-error" id="jobTitle-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="workExperience" class="form-label">Work Experience (in years)</label>
+            <div class="input-container">
+              <input type="number" class="form-control" id="workExperience" oninput="checkInput('workExperience')"
+                maxlength="2">
+              <span id="workExperience-icon" class="input-icon"></span>
+              <span class="input-error" id="workExperience-error"></span>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="navigation">
+        <button type="button" class="btn btn-warning " onclick="navigateTo('sec4')">back</button>
+        <button type="button" class="btn btn-primary" onclick="navigateTo('sec6')">Next</button>
+      </div>
+    </div>
+
+
+
+    <!-- LIC Policy Details -->
+    <div class="hidden" id="sec6">
+      <form class="row-g-3 form-section">
+        <h2>LIC Policy Details</h2>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="insuranceType" class="form-label">Type of Life Insurance:</label>
+            <div class="input-container">
+              <select id="insuranceType" class="form-select" onchange="checkInput('insuranceType')">
+                <option value="" selected>Choose...</option>
+                <option value="wholeLife">Whole Life Insurance</option>
+                <option value="termLife">Term Life Insurance</option>
+                <option value="health">Health Insurance</option>
+                <option value="auto">Retairement Insurance</option>
+                <option value="travel">Travel Insurance</option>
+                <option value="disability">Disability Insurance</option>
+                <option value="criticalIllness">Critical Illness Insurance</option>
+                <option value="longTermCare">Long-Term Care Insurance</option>
+              </select>
+              <span id="insuranceType-icon" class="input-icon"></span>
+              <span class="input-error" id="insuranceType-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="coverageAmount" class="form-label">Coverage Amount (Sum Assured):</label>
+            <div class="input-container">
+              <input type="number" id="coverageAmount" class="form-control" name="coverageAmount" placeholder="₹"
+                oninput="checkInput('coverageAmount')" maxlength="7">
+              <span id="coverageAmount-icon" class="input-icon"></span>
+              <span class="input-error" id="coverageAmount-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="policyTerm" class="form-label">Policy Term (in years):</label>
+            <div class="input-container">
+              <input type="number" id="policyTerm" name="policyTerm" class="form-control"
+                oninput="checkInput('policyTerm')" maxlength="2">
+              <span id="policyTerm-icon" class="input-icon"></span>
+              <span class="input-error" id="policyTerm-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="premiumFrequency" class="form-label">Premium Payment Frequency</label>
+            <div class="input-container">
+              <select id="premiumFrequency" class="form-select" onchange="checkInput('premiumFrequency')">
+                <option value="" selected>Choose...</option>
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="semi-annual">Semi-Annual</option>
+                <option value="annual">Annual</option>
+              </select>
+              <span id="premiumFrequency-icon" class="input-icon"></span>
+              <span class="input-error" id="premiumFrequency-error"></span>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+      <div class="navigation">
+        <button type="button" class="btn btn-warning" onclick="navigateTo('sec5')">back</button>
+        <button type="button" class="btn btn-primary" onclick="navigateTo('sec7')">Next</button>
+      </div>
+    </div>
+
+    <!-- Health Information -->
+    <div class="hidden" id="sec7">
+      <form class="row-g-3 form-section">
+        <h2>Health Information</h2>
+
+        <div class="row text-center">
+          <div class="col-sm-6">
+            <label for="healthStatus">Current Health Status:</label>
+            <div class="input-container">
+              <textarea id="healthStatus" minlength="20" maxlength="100"></textarea>
+              <span id="healthStatus-icon" class="input-icon"></span>
+              <span class="input-error" id="healthStatus-error"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="medicalHistory">Medical History:</label>
+            <div class="input-container">
+              <textarea id="medicalHistory" minlength="20" maxlength="100"></textarea>
+              <span id="medicalHistory-icon" class="input-icon"></span>
+              <span class="input-error" id="medicalHistory-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-sm-6">
+            <label for="lifestyleHabits">Lifestyle Habits:</label>
+            <div class="input-container">
+              <textarea id="lifestyleHabits" minlength="20" maxlength="100"></textarea>
+              <span id="lifestyleHabits-icon" class="input-icon"></span>
+              <span class="input-error" id="lifestyleHabits-error"></span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label for="existingConditions">Existing Medical Conditions:</label>
+            <div class="input-container">
+              <textarea id="existingConditions" minlength="20" maxlength="100"></textarea>
+              <span id="existingConditions-icon" class="input-icon"></span>
+              <span class="input-error" id="existingConditions-error"></span>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="navigation">
+        <button type="button" class="btn btn-warning" onclick="navigateTo('sec6')">back</button>
+        <button type="button" class="btn btn-primary" onclick="navigateTo('confirmation-section')">Next</button>
+      </div>
+    </div>
+
+    <div id="confirmation-section" class="hidden">
+      <div class="navigation" id="nav-btn">
+        <button type="button" class="btn btn-success submit" onclick="navigateTo('submission-section')">Submit</button>
+      </div>
+    </div>
+
+
+    <div id="submission-section" style="display: none;">
+      <form class="row-g-3 form-section">
+        <div class="submit-form">
+          <i class="fa-solid fa-circle-check success-logo" style="color: #49f50a;"></i>
+          <h1>Thank You!</h1>
+          <p>Your submission is recieved and we will contact you soon.</p>
+          <div class="navigation" id="nav-btn">
+            <button type="button" class="btn btn-warning"><a href="index.html"
+                style="text-decoration: none;color: white;">Another Form</a>
+              <span style="font-weight: bold;">&rarr;</span>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="script/form.js"></script>
+  </div>
+</body>

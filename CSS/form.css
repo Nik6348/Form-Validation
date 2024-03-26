@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Rowdies', sans-serif;
+    box-sizing: border-box;
+    background-color: #BBE8BE;
+}
+
+.brand-lic {
+    margin-bottom: 50px;
+}
+
+.lic-logo {
+    text-align: center;
+    padding: 10px;
+}
+
+.theme-container {
+    float: right;
+    padding: 10px;
+}
+
+.form-section {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: #64646f33 0px 7px 29px 0px;
+    margin-bottom: 40px;
+}
+
+.form-section h2 {
+    text-align: center;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    margin-top: 10px;
+}
+
+.caste {
+    font-size: 18px;
+}
+
+#caste {
+    font-size: 16px;
+}
+
+
+
+@media screen and (max-width:600px) {
+    .navigation {
+        flex-direction: column;
+    }
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    font-size: 22px;
+    top: 20px;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* .btn {
+    width: calc(100%/2);
+} */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    margin-top: 10px;
+}
+
+button {
+    box-shadow: #64646f33 0px 7px 29px 0px;
+    font-family: 'Pacifico';
+    font-weight: 200;
+}
+
+.form-check {
+    margin-top: 40px;
+}
+
+.form-check-input {
+    margin-top: -20px;
+}
+
+.input-error {
+    color: red;
+}
+
+.submit-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 30px;
+}
+
+.success-logo {
+    font-size: 10vw;
+}
+
+.submit-form h1 {
+    font-size: 7vw;
+    font-weight: 500;
+    font-family: 'Pacifico';
+}
+
+.submit-form p {
+    font-size: 1.5vw;
+
+}
+
+#submission-section {
+    margin: 50px 10px;
+    margin-bottom: 20px;
+}
+textarea{
+    padding: 10px;
+}
+.Confirm{
+    display: none;
+    padding: 20px;
+    color: green;
+}
+
+#progress-bar {
+    height: 20px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  #progress-bar {
+    background-color: #08fc10;
+    height: 100%;
+  }
+  
+  i{
+    padding: 3px;
+  }
