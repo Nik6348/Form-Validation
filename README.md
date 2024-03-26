@@ -10,7 +10,7 @@
 
 ![🌟 Explore the Demo:](Demo.png?raw=true "Form Validation")
 
-![🌟 Explore the Demo:](Demo1.png?raw=true "Form Validation")
+![🌟 Explore the Demo:](Demo2.png?raw=true "Form Validation")
 
 
 🎨 Highlights:
