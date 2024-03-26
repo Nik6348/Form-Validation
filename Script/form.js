@@ -16,7 +16,7 @@ function customTheme() {
 let initialAlertShown = false;
 
 function navigateTo(sectionId) {
-  // if (validateSection()) {
+   if (validateSection()) {
 
   if (sectionId === 'confirmation-section') {
     let Confirm = document.querySelector('.Confirm');
@@ -63,7 +63,7 @@ function navigateTo(sectionId) {
   nextSection.classList.add('visible');
 
 }
-// }
+}
 
 
 
