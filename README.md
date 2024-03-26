@@ -8,7 +8,7 @@
 🌟 Explore the Demo:
 [FormValidationJS Demo](https://nik6348.github.io/Form-Validation)
 
-![🌟 Explore the Demo:](Demo.png?raw=true "Form Validation)
+![🌟 Explore the Demo:](Demo.png?raw=true "Form Validation")
 
 
 🎨 Highlights:
